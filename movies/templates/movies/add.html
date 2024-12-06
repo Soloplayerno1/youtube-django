@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add movie</title>
+</head>
+<body>
+    <form action="/movies/add" method="post">
+        {% csrf_token %}
+        <label for="title">Movie title:</label>
+        <input type="text" placeholder="title" name="title" id="title" required>
+        <br>
+        <label for="year">Year release</label>
+        <input type="text" placeholder="year release" name="year" id="year" required>
+        <input type="submit" value="Add">
+    </form>
+</body>
+</html>
